@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>模板</title>
+    <meta charset="UTF-8">
+    <title>模板</title>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+    .div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+    }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // alert("show");
+        $(".div").bind('mousedown', function(event) {
+            /* 获取需要拖动节点的坐标 */
+            var offset_x = $(this)[0].offsetLeft; //x坐标
+            var offset_y = $(this)[0].offsetTop; //y坐标
+            /* 获取当前鼠标的坐标 */
+            var mouse_x = event.pageX;
+            var mouse_y = event.pageY;
+            $(this).bind('mousemove', function(ev) {
+                /* 计算鼠标移动了的位置 */
+                          
+                var _x = ev.pageX - mouse_x;          
+                var _y = ev.pageY - mouse_y;           /* 设置移动后的元素坐标 */           
+                var now_x = (offset_x + _x) + "px";          
+                var now_y = (offset_y + _y) + "px";           /* 改变目标元素的位置 */           
+                $(this).css({            
+                    top: now_y,
+                    left: now_x          
+                });
+                console.log(now_x);
+            })
+        }).bind('mouseup', function() {
+            $(this).unbind('mousemove');
+        })
+    })
+    </script>
 </head>
+
 <body>
-	<div>
-		<nav>
-			<ul>
-				<li>选项一</li>
-				<li>选项一</li>
-			</ul>
-		</nav>
-	</div>
+    <div>
+        <nav>
+            <ul>
+                <li>选项一</li>
+                <li>选项一</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="div"></div>
 </body>
+
 </html>
