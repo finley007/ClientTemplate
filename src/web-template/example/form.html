@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Demo</title>
+	<style type="text/css">
+		table.cal {
+			border-collapse: separate;
+			border-spacing: 0;
+			text-align: center;
+			color: #333;
+
+			.cal th, .cal td {
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.cal caption {
+			font-size: 1.25em;
+			padding-top: 0.692em;
+			padding-bottom: 0.692em;
+			background-color: #d4dde6;
+		}
+
+		.cal caption [rel="prev"] {
+			float: left;
+			margin-left: 0.2em;
+		}
+
+		.cal caption [rel="next"] {
+			float: right;
+			margin-right: 0.2em;
+		}
+
+		.cal caption a:link
+		.cal caption a:visited {
+			text-decoration: none;
+			color: #333;
+			padding: 0 0.2em;
+		}
+
+		.cal caption a:hover,
+		.cal caption a:active,
+		.cal caption a:focus {
+			background-color: #6d8ab7;
+		}
+
+		.cal thead th {
+			background-color: #d4dde6;
+			border-bottom: 1px solid #a9bacb;
+			font-size: 0.875em;
+		}
+
+		.cal tbody {
+			color: #a4a4a4;
+			text-shadow: 1px 1px 1px white;
+			background-color: #d0d9e2;
+		}
+
+		.cal tbody td {
+			border-top: 1px solid #e0e0e1;
+			border-right: 1px solid #9f9fa1;
+			border-bottom: 1px solid #acacad;
+			border-left: 1px solid #dfdfe0;
+		}
+
+		.cal tbody a {
+			display: block;
+			text-decoration: none;
+			color: #333;
+			background-color: #c0c8d2;
+			font-weight: bold;
+			padding: 0.385em 0.692em 0.308em 0.692em;
+		}
+
+		.cal tbody a:hover,
+		.cal tbody a:focus,
+		.cal tbody a:active,
+		.cal tbody .selected a:link,
+		.cal tbody .selected a:visited,
+		.cal tbody .selected a:hover,
+		.cal tbody .selected a:focus,
+		.cal tbody .selected a:active {
+			background-color: #6d8ab7;
+			color: white;
+			text-shadow: 1px 1px 2px #22456b;
+		}
+
+		fieldset {
+			margin: 1em 0;
+			padding: 1em;
+			border: 1px solid #ccc;
+			background: #f8f8f8;
+		}
+
+		legend {
+			font-weight: bold;
+		}
+
+		label {
+			float: left;
+			width: 10em;
+			cursor: pointer;
+		}
+
+		input {
+			width: 20em;
+		}
+
+		input.radio, input.checkbox, input.submit {
+			width: auto;
+		} 
+
+		input.redio {
+			margin-right: 1em;
+		}
+
+		textarea {
+			width: 100%;
+			height: 10em;
+		}
+
+		input[type="text"]:focus, textarea:focus {
+			background: #ffc;
+		}
+
+		.required {
+			font-size: 0.75em;
+			color: #760000;
+		}
+
+		div {
+			clear: left;
+			position: relative;
+		}
+
+		#monthOfBirthLabel, #yearOfBirthLabel {
+			text-indent: -1000em;
+			width: 0;
+		}
+
+		input#dateOfBith {
+			width: 3em;
+			margin-right: 0.5em;
+		}
+
+		select#monthOfBirth {
+			width: 10em;
+			margin-right: 0.5em;
+		}
+
+		input#yearOfBirth {
+			width: 5em;
+		}
+
+		fieldset#favoriteColor {
+			margin: 0;
+			padding: 0;
+			border: none;
+			background: transparent;
+		}
+
+		#favoriteColor h2{
+			width: 10em;
+			float: left;
+			font-size: 1em;
+			font-weight: normal;
+		}
+
+		#favoriteColor .col{
+			width: 8em;
+			float: left;
+			clear: none;
+		}
+
+		#favoriteColor label {
+			float: none;
+		}
+
+		button {
+			border: none;
+			background: none;
+			cursor: pointer;
+		}
+
+		button.submit {
+			width: 200px;
+			height: 50px;
+			border: 1px solid #989898;
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+			background: #c53063 bottom left repeat-x;
+			-moz-box-shadow: 2px 2px 2px #ccc;
+			-webkit-box-shadow: 2px 2px 2px #ccc;
+			box-shadow: 2px 2px 2px #ccc;
+			color: #fff;
+			font-size: 26px;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px #666;
+		}
+
+		.feedback {
+			position: absolute;
+			left: 30em;
+			right: 0;
+			top: 0.5em;
+			font-weight: bold;
+			color: #760000;
+			padding-left: 18px;
+		}
+	</style>
+</head>
+<body>
+	<table cellspacing="0" class="cal" summary="A calendar style date picker">
+		<caption>
+			<a href="" rel="prev">&lt;</a> January 2008
+			<a href="" rel="next">&gt;</a>
+		</caption>
+		<colgroup>
+			<col id="sun">
+			<col id="mon">
+			<col id="tue">
+			<col id="wed">
+			<col id="thur">
+			<col id="fri">
+			<col id="sat">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">Sun</th>
+				<th scope="col">Mon</th>
+				<th scope="col">Tue</th>
+				<th scope="col">Wed</th>
+				<th scope="col">Tur</th>
+				<th scope="col">Fri</th>
+				<th scope="col">Sat</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="null">30</td>
+				<td class="null">31</td>
+				<td><a href="">1</a></td>
+				<td><a href="">2</a></td>
+				<td><a href="">3</a></td>
+				<td><a href="">4</a></td>
+				<td><a href="">5</a></td>
+			</tr>
+			<tr>
+				<td><a href="">6</a></td>
+				<td><a href="">7</a></td>
+				<td class="selected"><a href="">8</a></td>
+				<td><a href="">9</a></td>
+				<td><a href="">10</a></td>
+				<td><a href="">11</a></td>
+				<td><a href="">12</a></td>
+			</tr>
+			<tr>
+				<td><a href="">13</a></td>
+				<td><a href="">14</a></td>
+				<td><a href="">15</a></td>
+				<td><a href="">16</a></td>
+				<td><a href="">17</a></td>
+				<td><a href="">18</a></td>
+				<td><a href="">19</a></td>
+			</tr>
+			<tr>
+				<td><a href="">20</a></td>
+				<td><a href="">21</a></td>
+				<td><a href="">22</a></td>
+				<td><a href="">23</a></td>
+				<td><a href="">24</a></td>
+				<td><a href="">25</a></td>
+				<td><a href="">26</a></td>
+			</tr>
+			<tr>
+				<td><a href="">27</a></td>
+				<td><a href="">28</a></td>
+				<td><a href="">29</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<fieldset>
+		<legend>Your Contact Details</legend>
+		<div>
+			<label for="author">Name:<em class="required">(required)</em></label>
+			<input type="text" id="author" name="author">
+		</div>
+		<div>
+			<label for="email">Email Address:</label>
+			<input type="text" id="email" name="email">
+		</div>
+		<div>
+			<label for="url">Web Address:
+			<em class="feedback">Incorrect email address.</em>
+			</label>
+			<input type="text" id="url" name="url">
+		</div>
+		<div>
+			<label for="text">Message:</label>
+			<textarea name="text" id="text"></textarea>
+		</div>
+		<div>
+			<label for="remember-yes">
+			<input type="radio" class="radio" id="remember-yes" name="remember-yes" value="yes">Yes</label>
+		</div>
+		<div>
+			<label for="remember-no">
+			<input type="radio" class="radio" id="remember-no" name="remember-no" value="no">No</label>
+		</div>
+		<div>
+			<label for="dateOfBirth">Date of Birth:</label>
+			<input name="dateOfBirth" id="dateOfBirth" type="text">
+			<label id="monthOfBirthLabel" for="monthOfBirth">Month of Birth:</label>
+			<select name="monthOfBirth" id="monthOfBirth">
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3">Mar</option>
+			</select>
+			<label id="yearOfBirthLabel" for="yearOfBirth">Year of Birth:</label>
+			<input name="yearOfBirth" id="yearOfBirth" type="text">
+		</div>
+		<fieldset id="favoriteColor">
+			<h2>Favorite Color:</h2>
+			<div class="col">
+				<div>
+					<label><input class="checkbox" type="checkbox" id="red" name="red" value="red">red</label>
+				</div>
+			</div>
+			<div class="col">
+				<div>
+					<label><input class="checkbox"type="checkbox" id="blue" name="blue">blue</label>
+				</div>
+			</div>
+			<div class="col">
+				<div>
+					<label><input class="checkbox" type="checkbox" id="red" name="red" value="red">red</label>
+				</div>
+			</div>
+			<div class="col">
+				<div>
+					<label><input class="checkbox"type="checkbox" id="blue" name="blue">blue</label>
+				</div>
+			</div>
+			<div class="col">
+				<div>
+					<label><input class="checkbox" type="checkbox" id="red" name="red" value="red">red</label>
+				</div>
+			</div>
+			<div class="col">
+				<div>
+					<label><input class="checkbox"type="checkbox" id="blue" name="blue">blue</label>
+				</div>
+			</div>
+		</fieldset>
+		<p><button type="submit" class="submit">Book Now >></button></p>
+	</fieldset>
+</body>
+</html>

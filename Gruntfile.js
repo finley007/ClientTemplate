@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', [
         'copy:dev',
-        'watch'
+        'serve'
     ]);
 
     grunt.registerTask('dist', [

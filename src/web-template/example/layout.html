@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Demo</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+
+		.wrapper {
+			width: 920px;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.header {
+			background-color: blue;
+		}
+
+		.footer {
+			background-color: orange;
+		}
+
+		.content .primary {
+			width: 650px;
+			padding-right: 20px;
+			float: right;
+			display: inline;
+			background-color: red;
+		}
+
+		.content .secondary {
+			width: 230px;
+			float: left;
+			display: inline;
+			background-color: green;
+		}
+		
+		.content .primary .primary {
+			width: 400px;
+			float: left;
+			display: inline;
+			background-color: yellow;
+		}
+
+		.content .primary .secondary {
+			width: 230px;
+			float: right;
+			display: inline;
+			background-color: brown;
+		}
+
+		.content {
+			overflow: hidden;
+		}
+
+		.wrapper1 {
+			width: 76.8%;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.header1 {
+			background-color: blue;
+		}
+
+		.footer1 {
+			background-color: orange;
+		}
+
+		.content1 .primary1 {
+			width: 72.82%;
+			padding-right: 20px;
+			float: right;
+			display: inline;
+			background-color: red;
+		}
+
+		.content1 .secondary1 {
+			width: 25%;
+			float: left;
+			display: inline;
+			background-color: green;
+		}
+		
+		.content1 .primary1 .primary1 {
+			width: 59.7%;
+			float: left;
+			display: inline;
+			background-color: yellow;
+		}
+
+		.content1 .primary1 .secondary1 {
+			width: 34.33%;
+			float: right;
+			display: inline;
+			background-color: brown;
+
+		}
+
+		.content1 {
+			overflow: hidden;
+		}
+
+		.wrapper2 {
+			width: 92em;
+			max-width: 95%;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.header2 {
+			background-color: blue;
+		}
+
+		.footer2 {
+			background-color: orange;
+		}
+
+		.content2 .primary2 {
+			width: 72.82%;
+			padding-right: 20px;
+			float: right;
+			display: inline;
+			background-color: red;
+		}
+
+		.content2 .secondary2 {
+			width: 25%;
+			float: left;
+			display: inline;
+			background-color: green;
+		}
+		
+		.content2 .primary2 .primary2 {
+			width: 59.7%;
+			float: left;
+			display: inline;
+			background-color: yellow;
+		}
+
+		.content2 .primary2 .secondary2 {
+			width: 34.33%;
+			float: right;
+			display: inline;
+			background-color: brown;
+		}
+
+		.content2 {
+			overflow: hidden;
+		}
+
+		.wrapper3 {
+			width: 100%;
+			height: 300px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.box {
+			width: 250px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 20px;
+			padding-bottom: 520px;
+			margin-left: 20px;
+			margin-bottom: 500px;
+			float: left;
+			display: inline;
+			background-color: yellow;
+		}
+
+		.bottom {
+			position: absolute;
+			bottom: 0;
+			height: 20px;
+			width: 290px;
+			margin-left: -20px;
+			background-color: yellow;
+			margin-left: -20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">header</header></div>
+		<div class="content">
+			<div class="primary">primary</div>
+			<div class="secondary">secondary</div>
+			<div class="primary">
+				<div class="primary">primary</div>
+				<div class="secondary">secondary</div>
+			</div>
+			<div class="secondary">third</div>
+		</div>
+		<div class="footer">footer</div>
+	</div>
+	<div class="wrapper1">
+		<div class="header1">header</header></div>
+		<div class="content1">
+			<div class="primary1">primary</div>
+			<div class="secondary1">secondary</div>
+			<div class="primary1">
+				<div class="primary1">primary</div>
+				<div class="secondary1">secondary</div>
+			</div>
+			<div class="secondary1">third</div>
+		</div>
+		<div class="footer1">footer</div>
+	</div>
+	<div class="wrapper2">
+		<div class="header2">header</header></div>
+		<div class="content2">
+			<div class="primary2">primary</div>
+			<div class="secondary2">secondary</div>
+			<div class="primary2">
+				<div class="primary2">primary</div>
+				<div class="secondary2">secondary</div>
+			</div>
+			<div class="secondary2">third</div>
+		</div>
+		<div class="footer2">footer</div>
+	</div>
+	<div class="wrapper3">
+		<div class="box">
+			<h1>Andy Budd</h1>
+			<p>日出而作，日入而息。
+凿井而饮，耕田而食。
+帝力于我何有哉！</p>
+			<div class="bottom"></div>
+		</div>
+		<div class="box">
+			<h1>Richard Rutter</h1>
+			<p>人生无根蒂，飘如陌上尘。
+分散逐风转，此已非常身。
+落地为兄弟，何必骨肉亲！
+得欢当作乐，斗酒聚比邻。
+盛年不重来，一日难再晨。
+及时当勉励，岁月不待人。</p>
+			<div class="bottom"></div>
+		</div>
+		<div class="box">
+			<h1>Jeremy Keith</h1>
+			<p>你看这黄鼠还有皮，人咋会不要脸面。人若不要脸面，还不如死了算啦。
+你看这黄鼠还有牙齿，人却不顾德行。人要没有德行，不去死还等什么。
+你看这黄鼠还有肢体，人却不知礼义。人要不知礼义，还不如快快死去。</p>
+			<div class="bottom"></div>
+		</div>
+	</div>
+</body>
+</html>

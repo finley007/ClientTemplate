@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navigator Demo</title>
+	<style type="text/css">
+		ol.pagination {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		ol.pagination li {
+			float: left;
+			margin-right: 0.6em;
+		}
+
+		ol.pagination a,
+		ol.pagination li.selected {
+			display: block;
+			padding: 0.2em 0.5em;
+			border: 1px solid #ccc;
+			text-decoration: none;
+		}
+
+		ol.pagination a:hover,
+		ol.pagination a:focus,
+		ol.pagination li.selected {
+			background-color: blue;
+			color: white;
+		}
+
+		ol.pagination a[rel="prev"],
+		ol.pagination a[rel="next"] {
+			border: none
+		}
+
+		ol.pagination a[rel="prev"]:before {
+			content: "\00AB";
+			padding-right: 0.5em;
+		}
+
+		ol.pagination a[rel="next"]:after {
+			content: "\00BB";
+			padding-left: 0.5em;
+		}
+
+		ul.nav {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 72em;
+			background: #FAA819 repeat-x;
+			overflow: hidden;
+		}
+
+		ul.nav li {
+			float: left;
+		}
+
+		ul.nav a {
+			display: block;
+			padding: 0 3em;
+			line-height: 2.1em;
+			text-decoration: none;
+			color: #fff;
+		}
+
+		ul.nav a:hover,
+		ul.nav a:focus {
+			color: #333;
+		}
+
+		ul.nav1, ul.nav1 ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			float: left;
+			border: 1px solid #486B02;
+			background-color: #8BD400;
+		}
+
+		ul.nav1 li {
+			float: left;
+			width: 8em;
+			background-color: #8BD400;
+		}
+
+		ul.nav1 li ul {
+			width: 8em;
+			position: absolute;
+			left: -999em;
+		}
+
+		.nav1 li:hover ul {
+			left: auto;
+		}
+
+		ul.nav1 a {
+			display: block;
+			color: #2B3F00;
+			text-decoration: none;
+			padding: 0.3em 1em;
+			border-right: 1px solid #486B02;
+			border-left: 1px solid #E4FFD3;
+		}
+
+		ul.nav1 li li a {
+			border-top: 1px solid #E4FFD3;
+			border-bottom: 1px solid #486B02;
+			border-left: 0;
+			border-right: 0;
+		}
+
+		ul.nav1 li:last-child a {
+			border-right: 0;
+			border-bottom: 0;
+		}
+
+		ul a:hover,
+		ul a:focus {
+			color: #E4FFD3;
+			background-color: #6DA203;
+		}
+
+		dl {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<ol class="pagination">
+		<li><a href="" rel="prev">prev</a></li>
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+		<li><a href="">3</a></li>
+		<li><a href="">4</a></li>
+		<li><a href="">5</a></li>
+		<li><a href="" rel="next">next</a></li>
+	</ol>
+	<ul class="nav">
+		<li><a href="">Home</a></li>
+		<li><a href="">About</a></li>
+		<li><a href="">News</a></li>
+		<li><a href="">Products</a></li>
+		<li><a href="">Services</a></li>
+		<li><a href="">CLients</a></li>
+		<li><a href="">Case Studies</a></li>
+	</ul>
+	<ul class="nav1">
+		<li><a href="">Home</a></li>
+		<li><a href="">Products</a>
+			<ul>
+				<li><a href="">Silverback</a></li>
+				<li><a href="">Font Deck</a></li>
+			</ul>
+		</li>
+		<li><a href="">Services</a>
+			<ul>
+				<li><a href="">Design</a></li>
+				<li><a href="">Development</a></li>
+				<li><a href="">Consultancy</a></li>
+			</ul>
+		</li>
+		<li><a href="">Contact</a></li>
+	</ul>
+	<dl>
+		<dt>Apple</dt>
+			<dd>Red，yellow or green fruit</dd>
+			<dd>Computer company</dd>
+		<dt>Bananna</dt>
+			<dd>Curved yellow fruit</dd>
+	</dl>
+</body>
+</html>
