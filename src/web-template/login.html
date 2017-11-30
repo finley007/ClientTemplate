@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/twitter-bootstrap/2.0.4/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="top"></div>
+        <div class="panel">
+            <legend><span>登 录</span></legend>
+            <form role="form">
+                <div class="form-group">
+                    <label for="name">用户名</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label for="name">密 码</label>
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default" id="submit">提 交</button>
+                    <button class="btn btn-default" onclick="app.login.login('aa','bb')">清 空</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script data-main="js/loginPage" src="js/lib/require.js"></script>
+
+</html>

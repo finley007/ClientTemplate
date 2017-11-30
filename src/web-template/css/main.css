@@ -1,0 +1,41 @@
+/*web-template base style sheet*/
+
+/*登录相关*/
+.login .top {
+	height: 150px;
+}
+
+.login .panel {
+	width: 486px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: yellow;
+}
+
+.login .form-group {
+	margin-top: 15px;
+	padding-left: 90px;
+	vertical-align: middle;
+}
+
+.login legend {
+	margin-bottom: 57px;
+}
+
+.login legend span {
+	padding-left: 40px;
+}
+
+.login label {
+	display: inline-block;
+	width: 60px;
+	margin-right: 8px;
+}
+
+.login button {
+	margin-left: 40px;
+}
+
+.login button#submit {
+	margin-left: 80px;
+}

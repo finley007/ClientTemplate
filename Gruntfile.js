@@ -17,13 +17,13 @@ module.exports = function(grunt) {
     grunt.initConfig({
         config: config,
         serve: {
-                options: {
-                    port: 8080,
-                    serve: {
-                        path: './dev/web-template/'
-                    }
+            options: {
+                port: 8080,
+                serve: {
+                    path: './dev/web-template/'
                 }
-            },
+            }
+        },
 
         watch: {
             options: {
@@ -62,16 +62,19 @@ module.exports = function(grunt) {
                     ]
                 }]
             }
-        }
+        },
+
+        clean: ['dev', 'dest']
     });
 
     grunt.registerTask('dev', [
+        'clean',
         'copy:dev',
         'serve'
     ]);
 
     grunt.registerTask('dist', [
-        
+
     ]);
 
     grunt.registerTask('default', ['dev']);
