@@ -3,6 +3,8 @@
 define(function(require) {
 
     var $ = require('jquery');
+    var Config = require('config');
+    var config = new Config();
 
     var loginModule = {
         //初始化界面
@@ -29,6 +31,7 @@ define(function(require) {
                 loginModule.invalidUserHint();
                 return false;
             }
+            alert(config.getLoginURL());
             return true;
         },
 
