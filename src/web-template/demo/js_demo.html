@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Demo</title>
+	<script type="text/javascript">
+		function Student(name) {
+			this.name = name;
+			this.hello = function() {
+				console.log('Hello ' + this.name);
+			}
+		}
+
+		var xiaoming = new Student('xiaoming');
+		xiaoming.hello();
+
+		var xiaohong = {
+			name : 'xiaohong',
+			hello : function() {
+				console.log('Hello' + this.xiaohong);
+			}
+		}
+		xiaohong.hello();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

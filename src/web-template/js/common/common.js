@@ -11,6 +11,7 @@ requirejs.config({
         jquery: 'jquery-3.2.1.min',
         bootstrap: 'bootstrap.min',
         underscore: 'underscore-min',
+        angular: 'angular.min',
         config: '../common/config',
     }
 });

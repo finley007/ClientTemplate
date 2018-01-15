@@ -1,41 +1,150 @@
 /*web-template base style sheet*/
 
-/*登录相关*/
-.login .top {
-	height: 150px;
+/*全局*/
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #383838;
 }
 
-.login .panel {
-	width: 486px;
+/*登录相关*/
+.login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	width: 400px;
 	height: 300px;
 	margin: 0 auto;
-	background-color: yellow;
+	margin-top: -181px;
+	margin-left: -200px;
+}
+
+.login #logo {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 35px;
+    vertical-align: 7px;
+    font-family: arial;
+    height: 60px;
+    text-shadow: 1px 1px 2px #bbb inset;
+}
+
+.login input {
+	margin-top: 25px;
+	width: 90%;
+	height: 3.6em;
+	padding: 4px 20px;
+	border:solid 1px #ccc;
+	border-radius: 10px;
+	box-sizing: border-box;
+	position: relative;
 }
 
 .login .form-group {
-	margin-top: 15px;
-	padding-left: 90px;
-	vertical-align: middle;
+	position: relative;
 }
 
-.login legend {
-	margin-bottom: 57px;
-}
-
-.login legend span {
-	padding-left: 40px;
-}
-
-.login label {
-	display: inline-block;
-	width: 60px;
-	margin-right: 8px;
+.login .error-tip {
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 32px;
+    color: red;
+    bottom: 6px;
+    font-size: 12px;
+    z-index: 2;
+    background: #fff;
 }
 
 .login button {
-	margin-left: 40px;
+	margin-top: 25px;
+	background: #4386f5;
+    color: #fff;
+    padding: 6px 0;
+    height: 3.6em;
+    border-radius: 10px;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.login button#submit {
-	margin-left: 80px;
+.register {
+	font-size: 13px;
+    margin-top: 19px;
+    color: #666;
+    text-align: left;
+    padding-left: 26px;
+}
+
+.forget-pwd {
+	font-size: 13px;
+    margin-top: 10px;
+    color: #666;
+    text-align: right;
+    padding-right: 26px;
+}
+
+.register a, .forget-pwd a {
+	text-decoration: none;
+	color: #333;
+}
+
+.third-party .sep {
+	margin: 20px 24px 0px 24px;
+	border-top: 1px solid #ddd;
+    height: 20px;
+    text-align: center;
+}
+
+.third-party .sep div {
+	margin-top: -9px;
+}
+
+.third-party .sep label {
+	color: #666;
+    display: inline-block;
+    padding: 0 10px;
+    background: #fff;
+}
+
+
+/*主界面*/
+.main {
+}
+
+.main .wrapper {
+	position: absolute;
+	top: 100px;
+	bottom: 0;
+	width: 100%;
+	background-color: green;
+}
+
+.main header {
+	height: 100px;
+	width: 100%;
+	background-color: blue;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.main .wrapper nav {
+	width: 200px;
+	float: left;
+	top: 0;
+	bottom: 0;
+	background: yellow;
+	position: absolute;
+}
+
+.main .wrapper .content {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 200px;
+	background-color: red;
 }

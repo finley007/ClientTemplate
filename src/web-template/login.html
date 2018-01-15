@@ -5,28 +5,34 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/twitter-bootstrap/2.0.4/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="login">
-        <div class="top"></div>
-        <div class="panel">
-            <legend><span>登 录</span></legend>
-            <form role="form">
-                <div class="form-group">
-                    <label for="name">用户名</label>
-                    <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+        <div><span id="logo">Logo</span></div>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                <div class="error-tip"></div>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                <div class="error-tip"></div>
+            </div>
+            <div class="forget-pwd">
+                <a href="">忘记密码</a>    
+            </div>
+            <button type="submit" class="btn btn-default" id="submit">登 录</button>
+        </form>
+        <div class="register">
+            <a href="">注 册</a>
+        </div>
+        <div class="third-party">
+            <div class="sep">
+                <div>
+                    <label>第三方账号登录</label>    
                 </div>
-                <div class="form-group">
-                    <label for="name">密 码</label>
-                    <input type="password" class="form-control" id="password" placeholder="请输入密码">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-default" id="submit">提 交</button>
-                    <button class="btn btn-default" id="clear">清 空</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </body>
