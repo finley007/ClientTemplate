@@ -42,9 +42,6 @@ body {
 	position: relative;
 }
 
-.login .form-group {
-	position: relative;
-}
 
 .login .error-tip {
     height: 30px;
