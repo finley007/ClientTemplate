@@ -8,6 +8,10 @@ body {
     color: #383838;
 }
 
+.hide {
+	display: none;
+}
+
 /*登录相关*/
 .login {
 	position: absolute;
@@ -31,6 +35,10 @@ body {
     text-shadow: 1px 1px 2px #bbb inset;
 }
 
+.login form div {
+	position: relative;
+}
+
 .login input {
 	margin-top: 25px;
 	width: 90%;
@@ -39,7 +47,6 @@ body {
 	border:solid 1px #ccc;
 	border-radius: 10px;
 	box-sizing: border-box;
-	position: relative;
 }
 
 
