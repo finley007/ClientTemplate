@@ -5,6 +5,8 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
+    grunt.loadNpmTasks('grunt-connect-apimock');
+
     var handlebars = require('handlebars');
 
     var config = {
@@ -15,7 +17,26 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig({
+        connect: {
+          options: {
+                port: 8000,
+                hostname: 'localhost',
+                middleware: function (connect) {
+                    var middlewares = [];
+                    //add the apimock middleware to connect 
+                    middlewares.push(require('grunt-connect-apimock/lib/apimock').mockRequest);
+                    return middlewares;
+                }
+          },
+          apimock: {
+            //apimock configuration 
+            url: '/myApp/api/',
+            dir: 'mock'
+          }
+        },
+
         config: config,
+
         serve: {
             options: {
                 port: 8080,
@@ -78,4 +99,6 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', ['dev']);
+
+    grunt.registerTask('mock', ['configureApimock', 'connect', 'watch']);
 };
