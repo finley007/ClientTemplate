@@ -36,8 +36,10 @@ module.exports = function(grunt) {
         uglify: {
             dev: {
                 options: {
-                    mangle: false, //混淆变量名
-                    preserveComments: 'false' //不删除注释，还可以为 false（删除全部注释），some（保留@preserve @license @cc_on等注释）
+                    preserveComments: 'false', //不删除注释，还可以为 false（删除全部注释），some（保留@preserve @license @cc_on等注释）
+                    compress: {
+                        // drop_console: true,
+                    }
                 },
                 src: 'dev/web-template/js/app.js',
                 dest: 'dev/web-template/js/app.min.js'
