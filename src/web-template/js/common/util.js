@@ -1,9 +1,9 @@
 var app = app || {};
 /** @namespace */
-app.Util = app.Util || {};
+app.util = app.util || {};
 (function($) {
     "use strict";
-    app.Util = {
+    app.util = {
         /**
          * version name
          * @type {String}
@@ -19,9 +19,24 @@ app.Util = app.Util || {};
          */
         init: function() {
 
+        },
+
+        showSpinner: function() {
+            if ( $("#spinner").length > 0) {
+                $('#spinner').removeClass('hide');
+            } else {
+                $('body').append('<div id="spinner"></div>');
+            } 
+        },
+
+        hideSpinner: function() {
+            if ( $("#spinner").length > 0) {
+                $('#spinner').addClass('hide');
+            }
         }
 
     };
-    app.Util.init();
+
+    app.util.init();
 
 })(jQuery);

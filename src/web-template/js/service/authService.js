@@ -11,6 +11,7 @@ app.authService = app.authService || {};
          */
         login: function(username, password) {
             var deferred = jQuery.Deferred();
+            app.util.showSpinner();
             jQuery.ajax({
                     url: "http://" + ENV.constant.server + "/myApp/api/register.json",
                     dataType: "json",
@@ -24,6 +25,7 @@ app.authService = app.authService || {};
                     } else {
                         deferred.resolve({ isLoggedin: false });
                     }
+                    // app.util.hideSpinner();
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
                     if (textStatus.statuscode) {

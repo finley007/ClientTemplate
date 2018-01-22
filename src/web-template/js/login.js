@@ -46,6 +46,7 @@ app.login = app.login || {};
                     console.log('err');
                 }
             );
+            return false;
         }
 
     }
