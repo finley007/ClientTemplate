@@ -1,50 +1,65 @@
 /*web-template base style sheet*/
 
+
 /*全局*/
+
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #383838;
+    overflow: hidden;
 }
 
 input:focus {
-	border-color: #4386f5 !important;
-	outline: 0;
+    border-color: #4386f5 !important;
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none !important;
 }
 
 #spinner {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1000;
-	filter: alpha(Opacity=80);
-	-moz-opacity: 0.5;
-	opacity: 0.5;
-	background-image: url(/img/spinner.gif);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    background-image: url(/img/spinner.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ccc;
 }
 
 .hide {
-	display: none;
+    display: none;
 }
 
+
 /*登录相关*/
+
 .login {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-	width: 400px;
-	height: 300px;
-	margin: 0 auto;
-	margin-top: -181px;
-	margin-left: -200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: -181px;
+    margin-left: -200px;
 }
 
 .login #logo {
@@ -58,17 +73,17 @@ input:focus {
 }
 
 .login form div {
-	position: relative;
+    position: relative;
 }
 
 .login input {
-	margin-top: 25px;
-	width: 90%;
-	height: 3.6em;
-	padding: 4px 20px;
-	border:solid 1px #ccc;
-	border-radius: 10px;
-	box-sizing: border-box;
+    margin-top: 25px;
+    width: 90%;
+    height: 3.6em;
+    padding: 4px 20px;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -85,8 +100,8 @@ input:focus {
 }
 
 .login button {
-	margin-top: 25px;
-	background: #4386f5;
+    margin-top: 25px;
+    background: #4386f5;
     color: #fff;
     padding: 6px 0;
     height: 3.6em;
@@ -97,7 +112,7 @@ input:focus {
 }
 
 .register {
-	font-size: 13px;
+    font-size: 13px;
     margin-top: 19px;
     color: #666;
     text-align: left;
@@ -105,72 +120,90 @@ input:focus {
 }
 
 .forget-pwd {
-	font-size: 13px;
+    font-size: 13px;
     margin-top: 10px;
     color: #666;
     text-align: right;
     padding-right: 26px;
 }
 
-.register a, .forget-pwd a {
-	text-decoration: none;
-	color: #333;
+.register a,
+.forget-pwd a {
+    text-decoration: none;
+    color: #333;
 }
 
 .third-party .sep {
-	margin: 20px 24px 0px 24px;
-	border-top: 1px solid #ddd;
+    margin: 20px 24px 0px 24px;
+    border-top: 1px solid #ddd;
     height: 20px;
     text-align: center;
 }
 
 .third-party .sep div {
-	margin-top: -9px;
+    margin-top: -9px;
 }
 
 .third-party .sep label {
-	color: #666;
+    color: #666;
     display: inline-block;
     padding: 0 10px;
     background: #fff;
 }
 
 
-/*主界面*/
-.main {
-}
 
-.main .wrapper {
-	position: absolute;
-	top: 100px;
-	bottom: 0;
-	width: 100%;
-	background-color: green;
-}
+/*主界面*/
+
+.main {}
 
 .main header {
-	height: 100px;
-	width: 100%;
-	background-color: blue;
-	position: fixed;
-	top: 0;
-	left: 0;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.main .wrapper nav {
-	width: 200px;
-	float: left;
-	top: 0;
-	bottom: 0;
-	background: yellow;
-	position: absolute;
+.main #logo {
+    margin-left: 60px;
+    margin-top: 6px;
+    display: inline-block;
+    font-size: 35px;
 }
 
-.main .wrapper .content {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-	left: 200px;
-	background-color: red;
+.main #header-tool {
+    float: right;
+    height: 100%;
+    width: 400px;
+    margin-right: 30px;
+}
+
+.main #header-tool div {
+    float: right;
+    display: inline-block;
+    height: 100%;
+    width: 60px;
+    margin-left: 10px;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.main nav {
+    padding: 0 10px;
+    top: 60px;
+    width: 200px;
+    height: calc(100% - 40px);
+    float: left;
+    position: absolute;
+}
+
+.main .content {
+    position: absolute;
+    width: 100%;
+    min-width: 500px;
+    height: calc(100% - 40px);
+    top: 60px;
+    left: 200px;
+    overflow: hidden;
 }

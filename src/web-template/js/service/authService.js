@@ -25,7 +25,7 @@ app.authService = app.authService || {};
                     } else {
                         deferred.resolve({ isLoggedin: false });
                     }
-                    // app.util.hideSpinner();
+                    app.util.hideSpinner();
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
                     if (textStatus.statuscode) {
