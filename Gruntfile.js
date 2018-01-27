@@ -8,8 +8,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-connect-apimock');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
-
-    var handlebars = require('handlebars');
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
 
     var config = {
         // configurable paths
@@ -21,6 +20,21 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         config: config,
+
+        handlebars: {
+            compile: {
+                options: {
+                    namespace: "app.comp",
+                    processName: function(filePath) {
+                        var pieces = filePath.split("/");
+                        return pieces[pieces.length - 1].replace('.hbs', '');
+                    }
+                },
+                files: {
+                    "<%= config.src %>/js/templates.js": "<%= config.src %>/js/component/**/*.hbs"
+                }
+            }
+        },
 
         concat: {
             options: {
@@ -125,6 +139,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', [
         'clean',
+        'handlebars',
         'concat',
         'uglify',
         'copy',

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>handlebars动态编译demo</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+</body>
+<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/lib/handlebars-v4.0.8.js"></script>
+<script type="text/javascript" src="js/app.min.js"></script>
+<script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+        <h1>{{title}}</h1>
+        <div class="body">
+            {{body}}
+        </div>
+    </div>
+</script>
+<script type="text/javascript">
+var source = $("#entry-template").html();
+var template = Handlebars.compile(source);
+var context = { title: "My New Post", body: "This is my first post!" };
+var html = template(context);
+$('body').append(html);
+</script>
+
+</html>

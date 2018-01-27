@@ -190,7 +190,7 @@ a:hover {
 }
 
 .main nav {
-    padding: 0 10px;
+    padding: 20px 10px;
     top: 60px;
     width: 200px;
     height: calc(100% - 40px);
@@ -206,4 +206,32 @@ a:hover {
     top: 60px;
     left: 200px;
     overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    min-width: 140px;
+    background: #fff;
+    z-index: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 6px #ccc;
+    border-radius: 3px;
+}
+
+.menu ul, li {
+    list-style: none;
+}
+
+.menu li {
+    padding: 7px 10px;
+    cursor: default;
+    color: #444;
+    line-height: 20px;
+}
+
+.menu li.sep {
+    margin: 3px 0;
+    padding: 0;
+    height: 1px;
+    background: #e7e7e7;
 }

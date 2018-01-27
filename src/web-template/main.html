@@ -15,20 +15,29 @@
                 <span id="logo">LOGO</span>
             </a>
             <div id="header-tool">
-                <div><a href="">profile</a></div>
+                <div id="profile"><a href="">profile</a></div>
                 <div><a href="">messge</a></div>
                 <div>clock</div>
             </div>
         </header>
         <nav>
             <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
+                <li><a href="#">Item1</a></li>
+                <li><a href="#">Item2</a></li>
+                <li><a href="#">Item3</a></li>
             </ul>
         </nav>
         <div class="content">content</div>
     </div>
 </body>
 
+<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/lib/handlebars.runtime.min.js"></script>
+<script type="text/javascript" src="js/app.min.js"></script>
+<script type="text/javascript">
+    var compiledTemplate = app.comp["menu"];
+    var context = {title: "My New Post", body: "This is my first post!"};
+    var html    = compiledTemplate(context);
+    $('body').append(html);
+</script>
 </html>
